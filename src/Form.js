@@ -24,17 +24,17 @@ function Form() {
         <form style={{textAlign:"center"}}>
           <label style={{fontSize:"28px"}}>Tittle:</label>
            <br></br>
-            <input style={{width:"25%",height:"4vh",marginBottom:"2%",fontSize:"20px"}}type="text" 
+            <input style={{width:"75%",height:"4vh",marginBottom:"2%",fontSize:"20px"}}type="text" 
             name="name" onChange={(e)=>setTittle(e.target.value)} required={true}/>
           <br></br>
           <label style={{fontSize:"28px"}}>
             Description:
             </label>
             <br></br>
-            <input style={{width:"25%",height:"4vh",marginBottom:"2%",fontSize:"20px"}} type="text"
+            <input style={{width:"75%",height:"4vh",marginBottom:"2%",fontSize:"20px"}} type="text"
              name="description" onChange={(e)=>setDescription(e.target.value)} required={true}/>
             <br></br>
-            <div style={{background: "cornflowerblue", marginLeft: "46%",marginRight: "45%"}} onClick={(e)=>{HandleSubmit(e)}}>
+            <div style={{background: "cornflowerblue", marginLeft: "20%",marginRight: "20%"}} onClick={(e)=>{HandleSubmit(e)}}>
               <p style={{fontSize:"30px",color:"white"}}>Submit</p>
             </div>
         </form>
