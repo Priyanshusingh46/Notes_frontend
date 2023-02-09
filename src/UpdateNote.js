@@ -20,7 +20,6 @@ function UpdateNote() {
         setTittle(result.data.tittle);
         setDescription(result.data.description);
     }
-    
   }
 
 
