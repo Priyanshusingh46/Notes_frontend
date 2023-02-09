@@ -39,7 +39,8 @@ function Home() {
            return (<Card data={data}/>)
            
           })
-        }
+
+      }
       </div>
     </div>
   )
