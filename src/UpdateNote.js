@@ -27,7 +27,7 @@ function UpdateNote() {
     e.preventDefault();
      
         try{
-        let result= await axios.put(`https://notes2-yvan.onrender.com/${params.id}`,{
+        let result= await axios.put(`https://notes2-yvan.onrender.com/updatenote/${params.id}`,{
           tittle,
           description,
         })
@@ -36,7 +36,7 @@ function UpdateNote() {
 
       }
       catch(e){
-        console.log(e);
+        console.log(e.message);
       }
   }
   return (
