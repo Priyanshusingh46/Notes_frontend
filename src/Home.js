@@ -12,7 +12,7 @@ function Home() {
 
   const getItems=async()=>{
     try{
-    let result = await axios.get("http://localhost:5000/getnote");
+    let result = await axios.get("https://notes2-yvan.onrender.com/getnote");
     setData(result.data);
     console.log(data);
     }

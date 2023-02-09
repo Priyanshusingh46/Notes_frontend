@@ -1,17 +1,20 @@
 import React,{useState} from "react"
 import axios from "axios"
+import { useNavigate } from 'react-router-dom';
 function Form() {
+  const navigate = useNavigate();
   const[tittle,setTittle]=useState("");
   const[description,setDescription] = useState("");
   const HandleSubmit =async(e)=>{
       e.preventDefault();
       console.log(tittle);
-      let user = await axios.post("http://localhost:5000/addnote",
+      let user = await axios.post("https://notes2-yvan.onrender.com/addnote",
       {
           tittle,
           description
       }
       )
+      navigate("/");
       console.log(user);
   }
   return (

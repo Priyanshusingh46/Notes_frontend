@@ -1,8 +1,20 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import update from "./Images/update.png";
 import Delete from "./Images/delete.png"
+import axios from "axios"
 import css from "./style.css"
 function Card(props) {
+  const deleteItem= async(id)=>{
+    const result = await axios.delete(`https://notes2-yvan.onrender.com/note/${id}`)
+    console.log(result);
+    if(result){
+      alert("record Deleted");
+    }
+    else{
+      console.log("no record");
+    }
+  }
   return (
     <div className='NotesDiv'>
         {/*tittle*/}
@@ -13,8 +25,8 @@ function Card(props) {
         </div>
           
         <div className='deleteupdatediv'>
-            <img id="logoimage" src={update} alt="error"/>
-            <img id="logoimage" src={Delete} alt="error"/>
+        <Link to={"/updatenote/"+props.data._id}><img id="logoimage" src={update} alt="error"/></Link>
+        <img id="logoimage" src={Delete} alt="error" onClick={(e)=>deleteItem(props.data._id,e)}/>
         </div>
     </div>
   )
