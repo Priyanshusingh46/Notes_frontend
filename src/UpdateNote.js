@@ -14,7 +14,7 @@ function UpdateNote() {
 
   const getProductDetails = async()=>{
     console.log(params.id)
-    let result = await axios.get(`https://notes2-yvan.onrender.com/${params.id}`)
+    let result = await axios.get(`https://notes2-yvan.onrender.com/updatenote/${params.id}`)
     console.log(result.data);
     if(result){
         setTittle(result.data.tittle);
